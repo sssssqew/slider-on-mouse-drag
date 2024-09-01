@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    font-family: sans-serif;
+    font-weight: 400;
+}
+:root{
+    --grid-columns: repeat(12, 1fr);
+    --gap: 5px;
+}
+html, body{
+    background-color: #fff;
+}
+section{
+    position: relative;
+    /* border: 1px solid blue; */
+    width: 100%;
+    height: 100vh;
+}
+.navbar{
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 60px;
+    z-index: 3;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* mix-blend-mode: difference; */
+}
+.nav__container{
+    width: 95%;
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: var(--grid-columns);
+    gap: var(--gap);
+    max-width: 1400px;
+}
+.header__logo{
+    grid-column: span 4;
+}
+#hero{
+    display: flex;
+    justify-content: center;
+}
+.container{
+    padding-top: 60px;
+    display: grid;
+    grid-template-columns: var(--grid-columns);
+    grid-template-rows: min-content 1fr 2fr;
+    gap: var(--gap);
+    max-width: 1400px;
+    width: 95%;
+}
+.intro__text{
+    grid-column: 9 / span 4;
+    text-indent: 50px;
+}
+.img__container{
+    position: relative;
+    /* border: 1px solid yellow; */
+    grid-column: span 3;
+    grid-row: 3;
+}
+img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+.slider__outer{
+    position: absolute;
+    top: 50%; left: 50%;
+    /* border: 3px solid green; */
+    transform: translate(-50%, -50%);
+    height: 80%;
+    width: 100%;
+    max-width: 1400px;
+    overflow: hidden;
+    cursor: grab;
+}
+.slider__inner{
+    width: 400%;
+    height: 100%;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+}
+.panel{
+    position: relative;
+    flex: 1;
+    height: 100%;
+    user-select: none;
+}
+
+/* .slider_outer img{
+    display: none;
+} */
+
+@media screen and (max-width: 850px){
+    .intro__text{
+        grid-column: 7 / span 6;
+    }
+}
+
+
+
+
+
+
